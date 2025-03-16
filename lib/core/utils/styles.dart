@@ -16,4 +16,11 @@ abstract class Styles {
     fontSize: 16,
     // fontFamily: 'Poppins',
   );
+  static const textStyle18 = TextStyle(color: Colors.white, fontSize: 18);
+
+  static const textStyle13 = TextStyle(
+    // color: Colors.grey[400],
+    fontSize: 13,
+    fontWeight: FontWeight.w700,
+  );
 }

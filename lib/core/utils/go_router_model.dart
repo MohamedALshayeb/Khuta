@@ -13,10 +13,7 @@ abstract class GoRouterModel {
         path: kOnBoarding,
         builder: (context, state) => const PageViewWidget(),
       ),
-      GoRoute(
-        path: kNavigateToAuth,
-        builder: (context, state) => const LogInView(),
-      ),
+      GoRoute(path: kNavigateToAuth, builder: (context, state) => LogInView()),
     ],
   );
 }
