@@ -4,13 +4,13 @@ import 'package:khuta_app/core/utils/styles.dart';
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField({
     super.key,
-    required this.hintText,
+
     this.obscureText = false,
     this.onChanged,
     required this.labelText,
   });
 
-  final String hintText, labelText;
+  final String labelText;
   final bool? obscureText;
 
   Function(String)? onChanged;
@@ -19,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 16, left: 16),
+      padding: const EdgeInsets.only(right: 16, left: 16, bottom: 16),
       child: TextFormField(
         onChanged: onChanged,
         validator: (value) {
@@ -29,10 +29,11 @@ class CustomTextFormField extends StatelessWidget {
         },
         obscureText: obscureText!,
         decoration: InputDecoration(
-          labelText: labelText,
-          hintText: hintText,
+          label: Align(
+            alignment: Alignment.centerRight,
+            child: Text(labelText!),
+          ),
           hintStyle: Styles.textStyle13.copyWith(color: Colors.grey[400]),
-          hintTextDirection: TextDirection.rtl,
           border: OutlineInputBorder(),
           enabledBorder: outlineInputBorder(),
           focusedBorder: outlineInputBorder(),

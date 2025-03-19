@@ -5,9 +5,15 @@ import 'package:khuta_app/constants.dart';
 import 'package:khuta_app/core/utils/styles.dart';
 
 class CustomAuthButton extends StatelessWidget {
-  CustomAuthButton({super.key, this.onPressed});
-  // final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  CustomAuthButton({
+    super.key,
+    required this.onPressed,
+    required this.textButtonAuth,
+  });
+
   void Function()? onPressed;
+
+  final String textButtonAuth;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
@@ -19,7 +25,7 @@ class CustomAuthButton extends StatelessWidget {
       // padding: const EdgeInsets.symmetric(horizontal: ),
       color: kPrimaryColor,
       onPressed: onPressed,
-      child: Text('تسجيل الدخول', style: Styles.textStyle18),
+      child: Text(textButtonAuth, style: Styles.textStyle18),
     );
   }
 }

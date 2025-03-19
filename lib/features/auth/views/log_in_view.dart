@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:khuta_app/constants.dart';
-import 'package:khuta_app/core/utils/assest_data.dart';
+
 import 'package:khuta_app/core/utils/styles.dart';
 import 'package:khuta_app/core/widget/custom_text_form_field.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_auth_button.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_google_auth.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_is_forget_pass.dart';
-import 'package:khuta_app/features/auth/views/widgets/is_not_has_account_text.dart';
+import 'package:khuta_app/features/auth/views/widgets/custom_is_has_account_text_or_not.dart';
 import 'package:khuta_app/features/auth/views/widgets/or_text_divider.dart';
 
 class LogInView extends StatefulWidget {
@@ -39,28 +38,27 @@ class _LogInViewState extends State<LogInView> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 73, bottom: 16),
-                child: CustomTextFormField(
-                  onChanged: (value) {
-                    email = value;
-                  },
-                  hintText: 'البريد الإلكتروني',
-                  labelText: 'البريد الإلكتروني',
-                ),
+              SizedBox(height: 73),
+              CustomTextFormField(
+                onChanged: (value) {
+                  email = value;
+                },
+
+                labelText: 'البريد الإلكتروني',
               ),
               CustomTextFormField(
                 onChanged: (value) {
                   pass = value;
                 },
-                hintText: 'كلمة المرور',
+                // hintText: 'كلمة المرور',
                 labelText: 'كلمة المرور',
                 obscureText: true,
               ),
-              SizedBox(height: 16),
+              // SizedBox(height: 16),
               CustomTextIsForgetPass(),
               SizedBox(height: 33),
               CustomAuthButton(
+                textButtonAuth: 'تسجيل الدخول',
                 onPressed: () {
                   if (keyForm.currentState!.validate()) {
                     print('valid');
@@ -76,7 +74,10 @@ class _LogInViewState extends State<LogInView> {
               //     ],
               //   ),
               // ),
-              IsNotHasAccountText(),
+              CustomIsHasAccountTextOrNot(
+                isHasOrNotAnAccountText: 'لا تمتلك حساب؟',
+                buttonText: 'قم بإنشاء حساب',
+              ),
               SizedBox(height: MediaQuery.of(context).size.height * .08),
               OrTextDivider(),
               SizedBox(height: 16),
