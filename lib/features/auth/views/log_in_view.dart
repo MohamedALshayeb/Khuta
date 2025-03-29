@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:khuta_app/core/utils/go_router_model.dart';
 
 import 'package:khuta_app/core/utils/styles.dart';
 import 'package:khuta_app/core/widget/custom_text_form_field.dart';
@@ -77,6 +79,11 @@ class _LogInViewState extends State<LogInView> {
               CustomIsHasAccountTextOrNot(
                 isHasOrNotAnAccountText: 'لا تمتلك حساب؟',
                 buttonText: 'قم بإنشاء حساب',
+                onPressed: () {
+                  GoRouter.of(
+                    context,
+                  ).push(GoRouterModel.kNavigateToRegisterView);
+                },
               ),
               SizedBox(height: MediaQuery.of(context).size.height * .08),
               OrTextDivider(),

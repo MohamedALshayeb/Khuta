@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:khuta_app/core/utils/go_router_model.dart';
 import 'package:khuta_app/core/utils/styles.dart';
 
 class CustomTextIsForgetPass extends StatelessWidget {
@@ -9,7 +11,9 @@ class CustomTextIsForgetPass extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 17),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          GoRouter.of(context).push(GoRouterModel.kNavigateToForgetPassView);
+        },
         child: Align(
           alignment: Alignment.bottomLeft,
           child: Text(

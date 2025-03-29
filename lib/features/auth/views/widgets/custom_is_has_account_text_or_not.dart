@@ -8,18 +8,21 @@ class CustomIsHasAccountTextOrNot extends StatelessWidget {
     super.key,
     required this.isHasOrNotAnAccountText,
     required this.buttonText,
+    required this.onPressed,
   });
   final String isHasOrNotAnAccountText;
   final String buttonText;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextButton(
-          onPressed: () {
-            GoRouter.of(context).push(GoRouterModel.kNavigateToRegisterView);
-          },
+          onPressed: onPressed,
+          //  () {
+          //   GoRouter.of(context).push(GoRouterModel.kNavigateToRegisterView);
+          // },
           child: Text(
             buttonText,
             style: Styles.textstyle16.copyWith(fontWeight: FontWeight.w600),

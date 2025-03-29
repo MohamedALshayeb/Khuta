@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:khuta_app/core/widget/custom_text_form_field.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_auth_button.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_check_box_conditions.dart';
@@ -53,6 +54,7 @@ class RegisterView extends StatelessWidget {
                 CustomIsHasAccountTextOrNot(
                   isHasOrNotAnAccountText: 'تمتلك حساب بالفعل؟',
                   buttonText: 'تسجيل دخول',
+                  onPressed: () => GoRouter.of(context).pop(),
                 ),
               ],
             ),
