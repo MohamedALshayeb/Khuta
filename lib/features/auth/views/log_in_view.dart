@@ -64,6 +64,10 @@ class _LogInViewState extends State<LogInView> {
                 onPressed: () {
                   if (keyForm.currentState!.validate()) {
                     print('valid');
+
+                    GoRouter.of(
+                      context,
+                    ).pushReplacement(GoRouterModel.kNavigateToHomeView);
                   }
                 },
               ),

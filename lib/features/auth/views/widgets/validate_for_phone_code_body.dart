@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:khuta_app/constants.dart';
+import 'package:go_router/go_router.dart';
+import 'package:khuta_app/core/utils/go_router_model.dart';
 import 'package:khuta_app/core/utils/styles.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_app_bar_with_arrowBack.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_auth_button.dart';
@@ -40,7 +41,11 @@ class ValidateForPhoneCodeBody extends StatelessWidget {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               CustomAuthButton(
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(
+                    context,
+                  ).push(GoRouterModel.kNavigateToCreateNewPassView);
+                },
                 textButtonAuth: 'تحقق من الرمز',
               ),
               TextButton(

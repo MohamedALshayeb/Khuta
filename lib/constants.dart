@@ -5,3 +5,4 @@ const kSoftColor = Color(0xffFAFAFA);
 const kLightGreyColor = Color(0xffDDDFDF);
 const kBlackGreyColor = Color(0xff333333);
 const kLightSkyGrayColor = Color(0xffE6E9EA);
+const kGrayscale950 = Color(0xff0C0D0D);

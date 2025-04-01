@@ -5,4 +5,6 @@ class AssetsData {
   static const String googleIcon = 'assets/imgs/Vector.png';
   static const String arrowBackImgIcon = 'assets/imgs/Frame 36786.png';
   static const String arrowbackImgIcon2 = 'assets/imgs/arrow_back_icon.png';
+  static const String kSuccessChangePassImg =
+      'assets/imgs/Frame 1171275941.png';
 }
