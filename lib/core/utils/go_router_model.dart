@@ -5,6 +5,7 @@ import 'package:khuta_app/features/auth/views/log_in_view.dart';
 import 'package:khuta_app/features/auth/views/forget_pass_view.dart';
 import 'package:khuta_app/features/auth/views/validate_for_phone_code_view.dart';
 import 'package:khuta_app/features/home/presentation/view/home_view.dart';
+import 'package:khuta_app/features/home/presentation/view/parent_and_teacher_view.dart';
 import 'package:khuta_app/features/on_boarding/views/page_view.dart';
 import 'package:khuta_app/features/splash/views/spalsh_view.dart';
 
@@ -17,6 +18,7 @@ abstract class GoRouterModel {
       '/validate_for_phone_code_view';
   static const kNavigateToCreateNewPassView = '/create_new_pass_view';
   static const kNavigateToHomeView = '/home_view';
+  static const kNavigateToParentAndTeacherView = '/parent_and_teacher_view';
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SpalchView()),
@@ -42,8 +44,12 @@ abstract class GoRouterModel {
         builder: (context, state) => CreateNewPassView(),
       ),
       GoRoute(
-        path: kNavigateToCreateNewPassView,
+        path: kNavigateToHomeView,
         builder: (context, state) => HomeView(),
+      ),
+      GoRoute(
+        path: kNavigateToParentAndTeacherView,
+        builder: (context, state) => ParentAndTeacherView(),
       ),
     ],
   );
