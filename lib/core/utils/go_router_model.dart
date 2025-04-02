@@ -13,7 +13,7 @@ import 'package:khuta_app/features/splash/views/spalsh_view.dart';
 
 abstract class GoRouterModel {
   static const kOnBoarding = '/page_view';
-  static const kNavigateToAuth = '/auth';
+  static const kNavigateToLoginView = '/auth';
   static const kNavigateToRegisterView = '/register_view';
   static const kNavigateToForgetPassView = '/forget_pass_view';
   static const kNavigateToValidatePhoneCodeView =
@@ -31,7 +31,10 @@ abstract class GoRouterModel {
         path: kOnBoarding,
         builder: (context, state) => const PageViewWidget(),
       ),
-      GoRoute(path: kNavigateToAuth, builder: (context, state) => LogInView()),
+      GoRoute(
+        path: kNavigateToLoginView,
+        builder: (context, state) => LogInView(),
+      ),
       GoRoute(
         path: kNavigateToRegisterView,
         builder: (context, state) => RegisterView(),

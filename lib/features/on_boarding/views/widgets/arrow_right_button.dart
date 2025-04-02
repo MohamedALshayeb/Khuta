@@ -48,7 +48,7 @@ class ArrowRightButton extends StatelessWidget {
               onPressed: () {
                 GoRouter.of(
                   context,
-                ).pushReplacement(GoRouterModel.kNavigateToAuth);
+                ).pushReplacement(GoRouterModel.kNavigateToLoginView);
               },
               icon: Icon(Icons.arrow_forward, color: kSoftColor, size: 29),
             ),

@@ -10,4 +10,7 @@ class AssetsData {
   static const String kParentandteacherImg =
       'assets/imgs/undraw_tree-swing_5010 1.png';
   static const String kAddChildImg = 'assets/imgs/c.png';
+  static const String kPersonProfileImg2 = 'assets/imgs/Ellipse 206.png';
+  static const String kCameraProfileImg = 'assets/imgs/Group 36419.png';
+  // static const String kPersonProfileImg = 'assets/imgs/i.png';
 }
