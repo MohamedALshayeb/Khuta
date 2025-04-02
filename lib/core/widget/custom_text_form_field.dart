@@ -33,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
             alignment: Alignment.centerRight,
             child: Text(labelText!),
           ),
-          hintStyle: Styles.textStyle13.copyWith(color: Colors.grey[400]),
+          labelStyle: Styles.textStyle13.copyWith(color: Colors.grey[400]),
           border: OutlineInputBorder(),
           enabledBorder: outlineInputBorder(),
           focusedBorder: outlineInputBorder(),

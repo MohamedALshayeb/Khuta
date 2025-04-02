@@ -10,10 +10,14 @@ class CustomAppBarWithArrowBack extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 16),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Spacer(flex: 3),
+
           Text(appBarText, style: Styles.textstyle24),
+
           SizedBox(width: MediaQuery.of(context).size.width * .08),
+          Spacer(),
           GestureDetector(
             onTap: () {
               Navigator.pop(context);

@@ -26,9 +26,15 @@ class CreateNewPassBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.035),
-        CustomTextFormField(labelText: 'كلمة المرور الجديدة'),
+        CustomTextFormField(
+          labelText: 'كلمة المرور الجديدة',
+          obscureText: true,
+        ),
         SizedBox(height: 24),
-        CustomTextFormField(labelText: 'إعادة كلمة المرور الجديدة'),
+        CustomTextFormField(
+          labelText: 'إعادة كلمة المرور الجديدة',
+          obscureText: true,
+        ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.03),
         CustomAuthButton(
           onPressed: () {

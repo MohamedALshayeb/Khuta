@@ -8,3 +8,4 @@ const kLightSkyGrayColor = Color(0xffE6E9EA);
 const kGrayscale950 = Color(0xff0C0D0D);
 const kPlatinumColor = Color(0xffE8E8E8);
 const kGray01Color = Color(0xffF6F6F6);
+const kGrayBlue9EColor = Color(0xff949D9E);
