@@ -8,19 +8,20 @@ class CustomCard extends StatelessWidget {
     required this.text,
     required this.iconButton,
     this.langText = '',
+    this.onPressed,
   });
 
   final Icon icon;
   final String text;
   final Icon iconButton;
   final String? langText;
-
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Card(
       child: Row(
         children: [
-          IconButton(onPressed: () {}, icon: iconButton),
+          IconButton(onPressed: onPressed, icon: iconButton),
           Text('$langText'),
           Spacer(),
 

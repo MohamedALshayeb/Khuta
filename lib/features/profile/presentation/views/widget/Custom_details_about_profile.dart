@@ -39,6 +39,11 @@ class _CustomDetailsAboutProfileState extends State<CustomDetailsAboutProfile> {
               icon: Icon(Icons.person),
               text: 'الملف الشخصي',
               iconButton: Icon(Icons.keyboard_arrow_left_sharp),
+              onPressed: () {
+                GoRouter.of(
+                  context,
+                ).push(GoRouterModel.kNavigateToPersonalProfileView);
+              },
             ),
             CustomCardWithSwitch(
               valueChange: valueChangeNotification,
