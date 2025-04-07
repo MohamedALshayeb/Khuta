@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:khuta_app/core/utils/go_router_model.dart';
 import 'package:khuta_app/core/widget/custom_text_form_field.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_app_bar_with_arrowBack.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_auth_button.dart';
@@ -27,7 +29,13 @@ class AddChildDataBody extends StatelessWidget {
           CustomTextFormField(labelText: 'تاريخ الميلاد'),
           SizedBox(height: MediaQuery.of(context).size.height * 0.03),
 
-          CustomAuthButton(onPressed: () {}, textButtonAuth: 'التالي'),
+          CustomAuthButton(
+            onPressed: () {
+              //temporarily
+              GoRouter.of(context).push(GoRouterModel.kNavigateToQuestionView);
+            },
+            textButtonAuth: 'التالي',
+          ),
         ],
       ),
     );

@@ -12,5 +12,5 @@ class AssetsData {
   static const String kAddChildImg = 'assets/imgs/c.png';
   static const String kPersonProfileImg2 = 'assets/imgs/Ellipse 206.png';
   static const String kCameraProfileImg = 'assets/imgs/Group 36419.png';
-  // static const String kPersonProfileImg = 'assets/imgs/i.png';
+  static const String kQuestionImgImg = 'assets/imgs/q1.png';
 }

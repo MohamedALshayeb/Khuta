@@ -10,6 +10,7 @@ import 'package:khuta_app/features/home/presentation/view/parent_and_teacher_vie
 import 'package:khuta_app/features/on_boarding/views/page_view.dart';
 import 'package:khuta_app/features/profile/presentation/views/personal_profile_view.dart';
 import 'package:khuta_app/features/profile/presentation/views/profile_view.dart';
+import 'package:khuta_app/features/questions/presentation/views/question_view.dart';
 import 'package:khuta_app/features/splash/views/spalsh_view.dart';
 
 abstract class GoRouterModel {
@@ -25,6 +26,7 @@ abstract class GoRouterModel {
   static const kNavigateToProfileView = '/profile_view';
   static const kNavigateToAddChilDdataView = '/add_child_data_view';
   static const kNavigateToPersonalProfileView = '/personal_profile_view';
+  static const kNavigateToQuestionView = '/question_view';
 
   static final router = GoRouter(
     routes: [
@@ -72,6 +74,10 @@ abstract class GoRouterModel {
       GoRoute(
         path: kNavigateToPersonalProfileView,
         builder: (context, state) => PersonalProfileView(),
+      ),
+      GoRoute(
+        path: kNavigateToQuestionView,
+        builder: (context, state) => QuestionView(),
       ),
     ],
   );

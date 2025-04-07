@@ -11,3 +11,4 @@ const kGray01Color = Color(0xffF6F6F6);
 const kGrayBlue9EColor = Color(0xff949D9E);
 const kGunmetalBlue46Color = Color(0xff131F46);
 const kCoolGrayA0Color = Color(0xff888FA0);
+const kBaSilverSandColor = Color(0xffBABABA);
