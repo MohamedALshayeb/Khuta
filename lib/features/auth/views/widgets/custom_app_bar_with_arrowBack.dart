@@ -22,7 +22,12 @@ class CustomAppBarWithArrowBack extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Image.asset(AssetsData.arrowbackImgIcon2),
+            child: Container(
+              decoration: BoxDecoration(
+                boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 16)],
+              ),
+              child: Image.asset(AssetsData.arrowbackImgIcon2),
+            ),
           ),
         ],
       ),

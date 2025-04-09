@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:khuta_app/core/utils/styles.dart';
 
 class OnBoardingTextSection extends StatelessWidget {
@@ -14,9 +15,11 @@ class OnBoardingTextSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(title, style: Styles.textstyle24),
+        Text(title, style: GoogleFonts.poppins(textStyle: Styles.textstyle24)),
         Text(description, style: Styles.textstyle16),
       ],
     );
   }
 }
+
+//Styles.textstyle24

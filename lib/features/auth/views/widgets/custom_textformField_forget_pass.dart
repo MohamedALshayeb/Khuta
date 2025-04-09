@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:khuta_app/constants.dart';
 import 'package:khuta_app/core/utils/styles.dart';
 
@@ -11,7 +12,8 @@ class CustomTextformfieldForgetPass extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: TextFormField(
         keyboardType: TextInputType.phone,
-        maxLength: 12,
+        // maxLength: 12,
+        inputFormatters: [LengthLimitingTextInputFormatter(11)],
         decoration: InputDecoration(
           enabledBorder: outLineInputBorderForForgetPass(),
           focusedBorder: outLineInputBorderForForgetPass(),

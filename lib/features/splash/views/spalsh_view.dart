@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:khuta_app/core/utils/go_router_model.dart';
 import 'package:khuta_app/core/utils/styles.dart';
 
@@ -47,7 +48,7 @@ class _SpalchViewState extends State<SpalchView>
           return Center(
             child: Text(
               'خُطى',
-              style: Styles.textstyle64.copyWith(fontFamily: 'Poppins'),
+              style: GoogleFonts.poppins(textStyle: Styles.textstyle64),
             ),
           );
         },

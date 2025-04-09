@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:khuta_app/core/widget/custom_text_form_field.dart';
+import 'package:khuta_app/features/auth/views/widgets/custom_app_bar_with_arrowBack.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_auth_button.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_check_box_conditions.dart';
 import 'package:khuta_app/features/auth/views/widgets/custom_is_has_account_text_or_not.dart';
@@ -20,7 +21,8 @@ class RegisterView extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 16),
-                CustomRegisterAppBar(),
+                // CustomRegisterAppBar(),
+                CustomAppBarWithArrowBack(appBarText: 'حساب جديد'),
                 SizedBox(height: 22),
                 CustomTextFormField(
                   labelText: 'الاسم كامل',
