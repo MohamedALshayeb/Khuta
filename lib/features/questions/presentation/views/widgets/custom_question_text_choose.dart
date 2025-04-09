@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:khuta_app/constants.dart';
+import 'package:khuta_app/core/utils/styles.dart';
 
 class CustomQuestionChoose extends StatelessWidget {
-  const CustomQuestionChoose({super.key});
+  const CustomQuestionChoose({super.key, required this.questionText});
+  final String questionText;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,15 @@ class CustomQuestionChoose extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 16)],
       ),
-      child: Center(child: Text('بقدر كبير جدا')),
+      child: Center(
+        child: Text(
+          questionText,
+          style: Styles.textstyle16.copyWith(
+            color: kBlackGreyColor,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+      ),
     );
   }
 }
